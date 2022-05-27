@@ -44,6 +44,7 @@ function generatePassword() {
   //define result from user's select
   if (!includeLowerCase && !includeUpperCase && !includeNumber && !includeSymbol) {
     alert('Please select at least one character type')
+    return '';
   } else if (includeLowerCase && includeUpperCase && includeNumber && includeSymbol) {
     result = lowerCase.concat(upperCase, number, symbol)
   } else if (includeLowerCase && includeUpperCase && includeNumber) {
