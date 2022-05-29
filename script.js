@@ -6,10 +6,10 @@ var includeLowerCase;
 var includeUpperCase;
 var includeNumber;
 var includeSymbol;
-var result;
 var symbol = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", "<", "=", ">", "?", "@", "[", "\\", "]", "^", "_", "`", "{", "|", "}", "~"];
 var number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+//change lower case to upper case by using toUpperCase(), map(), arrow function
 var upperCase = lowerCase.map(e => e.toUpperCase());
 
 function generatePassword() {
@@ -35,47 +35,23 @@ function generatePassword() {
       }
     }
   }
+  var result = [];
   //ask to select lowercase upperCase number symbol
   includeLowerCase = confirm("DO you want to include lower case?")
   includeUpperCase = confirm("Do you want to include upper case?")
   includeNumber = confirm("Do you want to include numbers?")
   includeSymbol = confirm("Do you want to include special characters?")
-
   //define result from user's select
   if (!includeLowerCase && !includeUpperCase && !includeNumber && !includeSymbol) {
     alert('Please select at least one character type')
     return '';
-  } else if (includeLowerCase && includeUpperCase && includeNumber && includeSymbol) {
-    result = lowerCase.concat(upperCase, number, symbol)
-  } else if (includeLowerCase && includeUpperCase && includeNumber) {
-    result = lowerCase.concat(upperCase, number)
-  } else if (includeLowerCase && includeUpperCase && includeSymbol) {
-    result = lowerCase.concat(upperCase, symbol)
-  } else if (includeLowerCase && includeUpperCase) {
-    result = lowerCase.concat(upperCase)
-  } else if (includeLowerCase && includeNumber && includeSymbol) {
-    result = lowerCase.concat(number, symbol)
-  } else if (includeLowerCase && includeNumber) {
-    result = lowerCase.concat(number)
-  } else if (includeLowerCase && includeSymbol) {
-    result = lowerCase.concat(symbol)
-  } else if (includeUpperCase && includeNumber && includeSymbol) {
-    result = upperCase.concat(number, symbol)
-  } else if (includeUpperCase && includeNumber) {
-    result = upperCase.concat(number)
-  } else if (includeUpperCase && includeSymbol) {
-    result = upperCase.concat(symbol)
-  } else if (includeNumber && includeSymbol) {
-    result = symbol.concat(number)
-  } else if (includeLowerCase) {
-    result = lowerCase;
-  } else if (includeUpperCase) {
-    result = upperCase;
-  } else if (includeNumber) {
-    result = number;
-  } else {
-    result = symbol;
   }
+  //conditional operations
+  includeLowerCase ? result = result.concat(lowerCase) : result
+  includeUpperCase ? result = result.concat(upperCase) : result
+  includeNumber ? result = result.concat(number) : result
+  includeSymbol ? result = result.concat(symbol) : result
+
   var resultStr = result.join('');
   var passwordRandom = '';
   //use Math.random to generate the password
