@@ -1,14 +1,17 @@
 ## Password Generator(JavaScript)
 
 * create an application that enable to generate random passwords based on criteria that users' selected. So users can a strong password based on their choices that provides greater security.
-<img src="./image/readme01.jpg">
+<img src="./image/readme00.jpg">
 
 * click the button to generate a password, it presents with a series of prompts for password criteria
+<img src="./image/readme01.jpg">
 <img src="./image/readme02.jpg">
 
-* choose a length of at least 8 characters and no more than 128 characters, asked for character types to include in the password
-if the input is not number type, smaller than 8 or greater than 128, it will not accept.
-will keep reminding and prompt to users until they input the valid number.
+* choose a length of at least 8 characters and no more than 128 characters
+<img src="./image/readme8-128.jpg">
+
+* if user's input is not number type or smaller than 8 or greater than 128, it will not accept,
+will keep reminding and prompt to user until they input the valid number.
 <img src="./image/readme03.jpg">
 <img src="./image/readme04.jpg">
 <img src="./image/readme05.jpg">
