@@ -1,6 +1,6 @@
 ## Password Generator(JavaScript)
 
-* create an application that enable to generate random passwords based on criteria that users' selected. So users can a strong password based on their choices that provides greater security.
+## create an application that enable to generate random passwords based on criteria that users' selected. So users can a strong password based on their choices that provides greater security.
 <img src="./image/readme00.jpg">
 
 * click the button to generate a password, it presents with a series of prompts for password criteria
