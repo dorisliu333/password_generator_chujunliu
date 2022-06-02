@@ -55,7 +55,7 @@ function generatePassword() {
   var resultStr = result.join('');
   var passwordRandom = '';
   //use Math.random to generate the password
-  for (var i = 0; i <= passwordLength; i++) {
+  for (var i = 0; i < passwordLength; i++) {
     var randomNumber = Math.floor(Math.random() * resultStr.length);
     passwordRandom += resultStr.substring(randomNumber, randomNumber + 1);
   }
